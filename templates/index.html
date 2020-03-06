@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Board Game Complexity Prediction App</title>
+</head>
+<body>
+  <h1>Board Game Complexity Prediction App</h1>
+	<form action="/submit" method='POST'>
+		<p>
+			<label for="minplayers">Minimum Number of Players</label><br>
+			<input type="number" name="minplayers">
+		</p>
+		<p>
+			<label for="maxplayers">Maximum Number of Players</label><br>
+			<input type="number" name="maxplayers">
+		</p>		
+		<p>
+			<label for="minplaytime">Minimum Play Time</label><br>
+			<input type="number" name="minplaytime">
+		</p>
+		<p>
+			<label for="maxplaytime">Maximum Play Time</label><br>
+			<input type="number" name="maxplaytime">
+		</p>
+        <p>
+			<label for="minage">Minimum Age</label><br>
+			<input type="number" name="minage">
+        </p>
+        <p>
+			<label for="boardgamecategory_cnt">Number of Categories</label><br>
+			<input type="number" name="boardgamecategory_cnt">
+        </p>
+        <p>
+			<label for="boardgamemechanic_cnt">Number of Mechanics</label><br>
+			<input type="number" name="boardgamemechanic_cnt">
+        </p>
+          <p>Select Mechanics</p>          
+          <p>
+          <input type="radio" id="Mechanic Acting" name="Mechanic Acting" value=0 checked>
+          <label for="Mechanic Acting">0</label>
+          <input type="radio" id="Mechanic Acting" name="Mechanic Acting" value=1>
+          <label for="Mechanic Acting"> Acting</label>
+          </p>
+  
+          <p>
+          <input type="radio" id="Mechanic Action Points" name="Mechanic Action Points" value=0 checked>
+          <label for="Mechanic Action Points">0</label>
+          <input type="radio" id="Mechanic Action Points" name="Mechanic Action Points" value=1>
+          <label for="Mechanic Action Points"> Action Points</label>
+          </p>
+          <p> 
+          <input type="radio" id="Mechanic Alliances" name="Mechanic Alliances" value=0 checked>
+          <label for="Mechanic Action Points">0</label>
+          <input type="radio" id="Mechanic Alliances" name="Mechanic Alliances" value=1>
+          <label for="Mechanic Alliances"> Alliances</label>  
+          </p>
+          <p>
+          <input type="radio" id="Mechanic Area Majority / Influence" name="Mechanic Area Majority / Influence" value=0 checked>
+          <label for="Mechanic Area Majority / Influence">0</label>
+          <input type="radio" id="Mechanic Area Majority / Influence" name="Mechanic Area Majority / Influence" value=1>
+          <label for="Mechanic Area Majority / Influence"> Area Majority / Influence</label>  
+          </p>
+          <p>
+          <input type="radio" id="Mechanic Betting and Bluffing" name="Mechanic Betting and Bluffing" value=0 checked>
+          <label for="Mechanic Betting and Bluffing">0</label>
+          <input type="radio" id="Mechanic Betting and Bluffing" name="Mechanic Betting and Bluffing" value=1>
+          <label for="Mechanic Betting and Bluffing"> Betting and Bluffing</label>  
+          </p>
+          <p>
+          <input type="radio" id="Mechanic Campaign / Battle Card Driven" name="Mechanic Campaign / Battle Card Driven" value=0 checked>
+          <label for="Mechanic Campaign / Battle Card Driven">0</label>
+          <input type="radio" id="Mechanic Campaign / Battle Card Driven" name="Mechanic Campaign / Battle Card Driven" value=1>
+          <label for="Mechanic Campaign / Battle Card Driven"> Campaign / Battle Card Driven</label>  
+          </p>
+          <p>
+          <input type="radio" id="Mechanic Contracts" name="Mechanic Contracts" value=0 checked>
+          <label for="Mechanic Contracts">0</label>
+          <input type="radio" id="Mechanic Contracts" name="Mechanic Contracts" value=1>
+          <label for="Mechanic Contracts"> Contracts</label>  
+          </p>
+          <p>
+          <input type="radio" id="Mechanic Cooperative Game" name="Mechanic Cooperative Game" value=0 checked>
+          <label for="Mechanic Cooperative Game">0</label>
+          <input type="radio" id="Mechanic Cooperative Game" name="Mechanic Cooperative Game" value=1>
+          <label for="Mechanic Cooperative Game"> Cooperative Game</label>  
+         </p>          
+         <p>
+          <input type="radio" id="Mechanic Crayon Rail System" name="Mechanic Crayon Rail System" value=0 checked>
+          <label for="Mechanic Crayon Rail System">0</label>
+          <input type="radio" id="Mechanic Crayon Rail System" name="Mechanic Crayon Rail System" value=1>
+          <label for="Mechanic Crayon Rail System"> Crayon Rail System</label>  
+         </p>          
+         <p>
+          <input type="radio" id="Mechanic End Game Bonuses" name="Mechanic End Game Bonuses" value=0 checked>
+          <label for="Mechanic End Game Bonuses">0</label>
+          <input type="radio" id="Mechanic End Game Bonuses" name="Mechanic End Game Bonuses" value=1>
+          <label for="Mechanic End Game Bonuses"> End Game Bonuses</label>  
+         </p>          
+         <p>
+          <input type="radio" id="Mechanic Hexagon Grid" name="Mechanic Hexagon Grid" value=0 checked>
+          <label for="Mechanic Hexagon Grid">0</label>
+          <input type="radio" id="Mechanic Hexagon Grid" name="Mechanic Hexagon Grid" value=1>
+          <label for="Mechanic Hexagon Grid"> Hexagon Grid</label>  
+         </p>       
+         <p>
+          <input type="radio" id="Mechanic Memory" name="Mechanic Memory" value=0 checked>
+          <label for="Mechanic Memory">0</label>
+          <input type="radio" id="Mechanic Memory" name="Mechanic Memory" value=1>
+          <label for="Mechanic Memory"> Memory</label>  
+         </p>       
+         <p>
+          <input type="radio" id="Mechanic Network and Route Building" name="Mechanic Network and Route Building" value=0 checked>
+          <label for="Mechanic Network and Route Building">0</label>
+          <input type="radio" id="Mechanic Network and Route Building" name="Mechanic Network and Route Building" value=1>
+          <label for="Mechanic Network and Route Building"> Network and Route Building</label>  
+         </p>      
+         <p>
+          <input type="radio" id="Mechanic Paper-and-Pencil" name="Mechanic Paper-and-Pencil" value=0 checked>
+          <label for="Mechanic Paper-and-Pencil">0</label>
+          <input type="radio" id="Mechanic Paper-and-Pencil" name="Mechanic Paper-and-Pencil" value=1>
+          <label for="Mechanic Paper-and-Pencil"> Paper-and-Pencil</label>  
+         </p>      
+         <p>
+          <input type="radio" id="Mechanic Pattern Recognition" name="Mechanic Pattern Recognition" value=0 checked>
+          <label for="Mechanic Pattern Recognition">0</label>
+          <input type="radio" id="Mechanic Pattern Recognition" name="Mechanic Pattern Recognition" value=1>
+          <label for="Mechanic Pattern Recognition"> Pattern Recognition</label>  
+         </p>      
+         <p>
+          <input type="radio" id="Mechanic Player Elimination" name="Mechanic Player Elimination" value=0 checked>
+          <label for="Mechanic Player Elimination">0</label>
+          <input type="radio" id="Mechanic Player Elimination" name="Mechanic Player Elimination" value=1>
+          <label for="Mechanic Player Elimination"> Player Elimination</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Push Your Luck" name="Mechanic Push Your Luck" value=0 checked>
+          <label for="Mechanic Push Your Luck">0</label>
+          <input type="radio" id="Mechanic Push Your Luck" name="Mechanic Push Your Luck" value=1>
+          <label for="Mechanic Push Your Luck"> Push Your Luck</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Rock-Paper-Scissors" name="Mechanic Rock-Paper-Scissors" value=0 checked>
+          <label for="Mechanic Rock-Paper-Scissors">0</label>
+          <input type="radio" id="Mechanic Rock-Paper-Scissors" name="Mechanic Rock-Paper-Scissors" value=1>
+          <label for="Mechanic Rock-Paper-Scissors"> Rock-Paper-Scissors</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Roll / Spin and Move" name="Mechanic Roll / Spin and Move" value=0 checked>
+          <label for="Mechanic Roll / Spin and Move">0</label>
+          <input type="radio" id="Mechanic Roll / Spin and Move" name="Mechanic Roll / Spin and Move" value=1>
+          <label for="Mechanic Roll / Spin and Move"> Roll / Spin and Move</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Storytelling" name="Mechanic Storytelling" value=0 checked>
+          <label for="Mechanic Storytelling">0</label>
+          <input type="radio" id="Mechanic Storytelling" name="Mechanic Storytelling" value=1>
+          <label for="Mechanic Storytelling"> Storytelling</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Variable Phase Order" name="Mechanic Variable Phase Order" value=0 checked>
+          <label for="Mechanic Variable Phase Order">0</label>
+          <input type="radio" id="Mechanic Variable Phase Order" name="Mechanic Variable Phase Order" value=1>
+          <label for="Mechanic Variable Phase Order"> Variable Phase Order</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Variable Player Powers" name="Mechanic Variable Player Powers" value=0 checked>
+          <label for="Mechanic Variable Player Powers">0</label>
+          <input type="radio" id="Mechanic Variable Player Powers" name="Mechanic Variable Player Powers" value=1>
+          <label for="Mechanic Variable Player Powers"> Variable Player Powers</label>  
+         </p> 
+         <p>
+          <input type="radio" id="Mechanic Other" name="Mechanic Other" value=0 checked>
+          <label for="Mechanic Other">0</label>
+          <input type="radio" id="Mechanic Other" name="Mechanic Other" value=1>
+          <label for="Mechanic Other"> Other (catch-all for any other mechanic)</label>  
+         </p> 
+          <p>Select Categories</p>
+          <p>
+            <input type="radio" id="Category Action / Dexterity" name="Category Action / Dexterity" value=0 checked>
+            <label for="Category Action / Dexterity">0</label>
+            <input type="radio" id="Category Action / Dexterity" name="Category Action / Dexterity" value=1>
+            <label for="Category Action / Dexterity"> Action / Dexterity</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Age of Reason" name="Category Age of Reason" value=0 checked>
+            <label for="Category Age of Reason">0</label>
+            <input type="radio" id="Category Age of Reason" name="Category Age of Reason" value=1>
+            <label for="Category Age of Reason"> Age of Reason</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category American Revolutionary War" name="Category American Revolutionary War" value=0 checked>
+            <label for="Category American Revolutionary War">0</label>
+            <input type="radio" id="Category American Revolutionary War" name="Category American Revolutionary War" value=1>
+            <label for="Category American Revolutionary War">American Revolutionary War</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Card Game" name="Category Card Game" value=0 checked>
+            <label for="Category Card Game">0</label>
+            <input type="radio" id="Category Card Game" name="Category Card Game" value=1>
+            <label for="Category Card Game"> Card Game</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Civilization" name="Category Civilization" value=0 checked>
+            <label for="Category Civilization">0</label>
+            <input type="radio" id="Category Civilization" name="Category Civilization" value=1>
+            <label for="Category Civilization"> Civilization</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Deduction" name="Category Deduction" value=0 checked>
+            <label for="Category Deduction">0</label>
+            <input type="radio" id="Category Deduction" name="Category Deduction" value=1>
+            <label for="Category Deduction"> Deduction</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Economic" name="Category Economic" value=0 checked>
+            <label for="Category Economic">0</label>
+            <input type="radio" id="Category Economic" name="Category Economic" value=1>
+            <label for="Category Economic"> Economic</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Expansion for Base-game" name="Category Expansion for Base-game" value=0 checked>
+            <label for="Category Expansion for Base-game">0</label>
+            <input type="radio" id="Category Expansion for Base-game" name="Category Expansion for Base-game" value=1>
+            <label for="Category Expansion for Base-game"> Expansion for Base-game</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Humor" name="Category Humor" value=0 checked>
+            <label for="Category Humor">0</label>
+            <input type="radio" id="Category Humor" name="Category Humor" value=1>
+            <label for="Category Humor"> Humor</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Korean War" name="Category Korean War" value=0 checked>
+            <label for="Category Korean War">0</label>
+            <input type="radio" id="Category Korean War" name="Category Korean War" value=1>
+            <label for="Category Korean War"> Korean War</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Math" name="Category Math" value=0 checked>
+            <label for="Category Math">0</label>
+            <input type="radio" id="Category Math" name="Category Math" value=1>
+            <label for="Category Math"> Math</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Mature / Adult" name="Category Mature / Adult" value=0 checked>
+            <label for="Category Mature / Adult">0</label>
+            <input type="radio" id="Category Mature / Adult" name="Category Mature / Adult" value=1>
+            <label for="Category Mature / Adult"> Mature / Adult</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Medical" name="Category Medical" value=0 checked>
+            <label for="Category Medical">0</label>
+            <input type="radio" id="Category Medical" name="Category Medical" value=1>
+            <label for="Category Medical"> Medical</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Medieval" name="Category Medieval" value=0 checked>
+            <label for="Category Medieval">0</label>
+            <input type="radio" id="Category Medieval" name="Category Medieval" value=1>
+            <label for="Category Medieval"> Medieval</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Miniatures" name="Category Miniatures" value=0 checked>
+            <label for="Category Miniatures">0</label>
+            <input type="radio" id="Category Miniatures" name="Category Miniatures" value=1>
+            <label for="Category Miniatures"> Miniatures</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Murder/Mystery" name="Category Murder/Mystery" value=0 checked>
+            <label for="Category Murder/Mystery">0</label>
+            <input type="radio" id="Category Murder/Mystery" name="Category Murder/Mystery" value=1>
+            <label for="Category Murder/Mystery"> Murder/Mystery</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Napoleonic" name="Category Napoleonic" value=0 checked>
+            <label for="Category Napoleonic">0</label>
+            <input type="radio" id="Category Napoleonic" name="Category Napoleonic" value=1>
+            <label for="Category Napoleonic"> Napoleonic</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Party Game" name="Category Party Game" value=0 checked>
+            <label for="Category Party Game">0</label>
+            <input type="radio" id="Category Party Game" name="Category Party Game" value=1>
+            <label for="Category Party Game"> Party Game</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Pike and Shot" name="Category Pike and Shot" value=0 checked>
+            <label for="Category Pike and Shot">0</label>
+            <input type="radio" id="Category Pike and Shot" name="Category Pike and Shot" value=1>
+            <label for="Category Pike and Shot"> Pike and Shot</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Puzzle" name="Category Puzzle" value=0 checked>
+            <label for="Category Puzzle">0</label>
+            <input type="radio" id="Category Puzzle" name="Category Puzzle" value=1>
+            <label for="Category Puzzle"> Puzzle</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Racing" name="Category Racing" value=0 checked>
+            <label for="Category Racing">0</label>
+            <input type="radio" id="Category Racing" name="Category Racing" value=1>
+            <label for="Category Racing"> Racing</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Renaissance" name="Category Renaissance" value=0 checked>
+            <label for="Category Renaissance">0</label>
+            <input type="radio" id="Category Renaissance" name="Category Renaissance" value=1>
+            <label for="Category Renaissance"> Renaissance</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Territory Building" name="Category Territory Building" value=0 checked>
+            <label for="Category Territory Building">0</label>
+            <input type="radio" id="Category Territory Building" name="Category Territory Building" value=1>
+            <label for="Category Territory Building"> Territory Building</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Trains" name="Category Trains" value=0 checked>
+            <label for="Category Trains">0</label>
+            <input type="radio" id="Category Trains" name="Category Trains" value=1>
+            <label for="Category Trains"> Trains</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Vietnam War" name="Category Vietnam War" value=0 checked>
+            <label for="Category Vietnam War">0</label>
+            <input type="radio" id="Category Vietnam War" name="Category Vietnam War" value=1>
+            <label for="Category Vietnam War"> Vietnam War</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Wargame" name="Category Wargame" value=0 checked>
+            <label for="Category Wargame">0</label>
+            <input type="radio" id="Category Wargame" name="Category Wargame" value=1>
+            <label for="Category Wargame"> Wargame</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Word Game" name="Category Word Game" value=0 checked>
+            <label for="Category Word Game">0</label>
+            <input type="radio" id="Category Word Game" name="Category Word Game" value=1>
+            <label for="Category Word Game"> Word Game</label>  
+           </p> 
+           <p>
+            <input type="radio" id="Category Other" name="Category Other" value=0 checked>
+            <label for="Category Other">0</label>
+            <input type="radio" id="Category Other" name="Category Other" value=1>
+            <label for="Category Other"> Other</label>  
+           </p> 
+        <p><button type="submit">Submit</button></p>
+  </form>
+  
+  {{ prediction_text }}
+</body>
+</html>
