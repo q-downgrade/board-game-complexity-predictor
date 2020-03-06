@@ -23,7 +23,7 @@ def load_model():
 def index():
    return render_template('index.html')
 
-@app.route('/submit', methods=['POST'])
+@app.route('/submit', methods=['GET', 'POST'])
 def make_prediction():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
