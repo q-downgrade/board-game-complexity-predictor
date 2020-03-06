@@ -11,10 +11,7 @@ app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(APP_ROOT, "./models/model.pkl") 
 
-
-def load_model():
-    global model
-    model = pickle.load(open(MODEL_PATH, 'rb'))
+model = pickle.load(open(MODEL_PATH, 'rb'))
 
 
 
@@ -32,5 +29,4 @@ def make_prediction():
 
 
 if __name__ == '__main__':
-    load_model()
     app.run(debug=True)
