@@ -5,7 +5,6 @@ from sklearn.externals import joblib
 import numpy as np
 import os
 
-GLOBAL_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # app
 app = Flask(__name__)
@@ -24,7 +23,7 @@ def load_model():
 def index():
    return render_template('index.html')
 
-@app.route('/submit', methods=['GET', 'POST'])
+@app.route('/submit', methods=['POST'])
 def make_prediction():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]

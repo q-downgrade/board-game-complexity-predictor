@@ -12,3 +12,4 @@ seaborn==0.10.0
 yapf==0.29.0
 zict==1.0.0
 zipp==2.2.0
+gunicorn==20.0.4
