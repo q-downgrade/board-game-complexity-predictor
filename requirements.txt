@@ -32,10 +32,7 @@ certifi==2019.11.28
 cffi==1.14.0
 chardet==3.0.4
 Click==7.0
-click-plugins==1.1.1
-cligj==0.5.0
 cloudpickle==1.2.2
-clyent==1.2.2
 colorama==0.4.3
 contextlib2==0.6.0.post1
 coverage==5.0.3
