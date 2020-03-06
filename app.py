@@ -1,21 +1,21 @@
 import pandas as pd
 from flask import Flask, jsonify, request, render_template
 import pickle
-from sklearn.externals import joblib
 import numpy as np
 import os
 
 
-# app
+os.environ['THEANO_FLAGS'] = 'optimizer=None'
 app = Flask(__name__)
 
-model = None
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(APP_ROOT, "./models/model.pkl") 
 
-MODEL_PATH = "./static/model.pkl"
 
 def load_model():
     global model
     model = pickle.load(open(MODEL_PATH, 'rb'))
+
 
 
 # routes
@@ -32,4 +32,5 @@ def make_prediction():
 
 
 if __name__ == '__main__':
+    load_model()
     app.run(debug=True)
