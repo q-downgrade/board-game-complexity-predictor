@@ -5,12 +5,9 @@ from sklearn.externals import joblib
 import numpy as np
 import os
 
-
-
-
 # app
 app = Flask(__name__)
-model = pickle.load(open('/Users/lindsayleedham/dsi10/projects/project_6/flask/model.pkl','rb'))
+model = pickle.load(open(os.path.join('model.pkl','rb')))
 
 
 # routes
