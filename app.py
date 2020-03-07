@@ -5,27 +5,27 @@ import numpy as np
 import os
 
 
-os.environ['THEANO_FLAGS'] = 'optimizer=None'
 app = Flask(__name__)
 
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(APP_ROOT, "./models/model.pkl") 
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))     # set file directory path
 
-model = pickle.load(open(MODEL_PATH, 'rb'))
+MODEL_PATH = os.path.join(APP_ROOT, "./models/model.pkl")  # set path to the model
+
+model = pickle.load(open(MODEL_PATH, 'rb')) # load the pickled model
 
 
 
 # routes
-@app.route("/")
-def index():
-   return render_template('index.html')
+@app.route("/")                         # render the website
+def index(): 
+   return render_template('index.html') 
 
-@app.route('/submit', methods=['GET', 'POST'])
+@app.route('/submit', methods=['GET', 'POST'])  # submit the form
 def make_prediction():
-    int_features = [int(x) for x in request.form.values()]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
-    return render_template('prediction.html', prediction = prediction)
+    int_features = [int(x) for x in request.form.values()] # take the values from the form as a list
+    final_features = [np.array(int_features)]       # convert the values into a numpy array
+    prediction = model.predict(final_features)      # pass the array into the model for prediction
+    return render_template('prediction.html', prediction = prediction)  # render the prediction page
 
 
 if __name__ == '__main__':
