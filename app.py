@@ -1,5 +1,4 @@
-import pandas as pd
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, request, render_template
 import pickle
 import numpy as np
 import os
@@ -22,10 +21,10 @@ def index():
 
 @app.route('/submit', methods=['GET', 'POST'])  # submit the form
 def make_prediction():
-    int_features = [int(x) for x in request.form.values()] # take the values from the form as a list
-    final_features = [np.array(int_features)]       # convert the values into a numpy array
+    features = [int(x) for x in request.form.values()] # take the values from the form as a list
+    final_features = [np.array(features)]       # convert the values into a numpy array
     prediction = model.predict(final_features)      # pass the array into the model for prediction
-    return render_template('prediction.html', prediction = prediction)  # render the prediction page
+    return render_template('prediction.html', prediction = prediction[0])  # render the prediction page
 
 
 if __name__ == '__main__':
